@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		5795A6A827C2EBC0005DC136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A6A727C2EBC0005DC136 /* AppDelegate.swift */; };
 		5795A6AA27C2EBC0005DC136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A6A927C2EBC0005DC136 /* SceneDelegate.swift */; };
-		5795A6AC27C2EBC0005DC136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A6AB27C2EBC0005DC136 /* ViewController.swift */; };
+		5795A6AC27C2EBC0005DC136 /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A6AB27C2EBC0005DC136 /* FactsViewController.swift */; };
 		5795A6AF27C2EBC0005DC136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5795A6AD27C2EBC0005DC136 /* Main.storyboard */; };
 		5795A6B127C2EBC2005DC136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5795A6B027C2EBC2005DC136 /* Assets.xcassets */; };
 		5795A6B427C2EBC2005DC136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5795A6B227C2EBC2005DC136 /* LaunchScreen.storyboard */; };
+		5795A70827CC66A9005DC136 /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A70727CC66A9005DC136 /* BreedsTableViewController.swift */; };
+		5795A70A27CC6815005DC136 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 5795A70927CC6815005DC136 /* breeds.json */; };
+		5795A70C27CC68AF005DC136 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A70B27CC68AF005DC136 /* Breed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5795A6A427C2EBC0005DC136 /* Happy Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5795A6A727C2EBC0005DC136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5795A6A927C2EBC0005DC136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5795A6AB27C2EBC0005DC136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5795A6AB27C2EBC0005DC136 /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
 		5795A6AE27C2EBC0005DC136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5795A6B027C2EBC2005DC136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5795A6B327C2EBC2005DC136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5795A6B527C2EBC2005DC136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5795A70727CC66A9005DC136 /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
+		5795A70927CC6815005DC136 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
+		5795A70B27CC68AF005DC136 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				5795A6A727C2EBC0005DC136 /* AppDelegate.swift */,
 				5795A6A927C2EBC0005DC136 /* SceneDelegate.swift */,
-				5795A6AB27C2EBC0005DC136 /* ViewController.swift */,
+				5795A6AB27C2EBC0005DC136 /* FactsViewController.swift */,
+				5795A70727CC66A9005DC136 /* BreedsTableViewController.swift */,
 				5795A6AD27C2EBC0005DC136 /* Main.storyboard */,
 				5795A6B027C2EBC2005DC136 /* Assets.xcassets */,
 				5795A6B227C2EBC2005DC136 /* LaunchScreen.storyboard */,
 				5795A6B527C2EBC2005DC136 /* Info.plist */,
+				5795A70927CC6815005DC136 /* breeds.json */,
+				5795A70B27CC68AF005DC136 /* Breed.swift */,
 			);
 			path = "Happy Dog";
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5795A70A27CC6815005DC136 /* breeds.json in Resources */,
 				5795A6B427C2EBC2005DC136 /* LaunchScreen.storyboard in Resources */,
 				5795A6B127C2EBC2005DC136 /* Assets.xcassets in Resources */,
 				5795A6AF27C2EBC0005DC136 /* Main.storyboard in Resources */,
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5795A6AC27C2EBC0005DC136 /* ViewController.swift in Sources */,
+				5795A6AC27C2EBC0005DC136 /* FactsViewController.swift in Sources */,
 				5795A6A827C2EBC0005DC136 /* AppDelegate.swift in Sources */,
+				5795A70C27CC68AF005DC136 /* Breed.swift in Sources */,
+				5795A70827CC66A9005DC136 /* BreedsTableViewController.swift in Sources */,
 				5795A6AA27C2EBC0005DC136 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
