@@ -22,9 +22,21 @@ class BreedsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        // parse local file
         if let data = readLocalFile(forName: "breeds") {
             breeds = parse(jsonData: data)
         }
+        
+        // load json
+//        self.loadJson(fromUrlRequest: createUrlRequest()) { (result) in
+//            switch result {
+//                case .success(let data):
+//                    print("Request successful")
+//                    self.breeds = self.parse(jsonData: data)
+//                case .failure(let error):
+//                    print("Request failed: \(error)")
+//            }
+//        }
         
         for breed in breeds {
             breedDictionary[breed.name] = breed
@@ -42,6 +54,31 @@ class BreedsTableViewController: UITableViewController {
         }
         
         return nil
+    }
+    
+    private func createUrlRequest () -> URLRequest {
+        let url = URL(string: "https://api.thedogapi.com/v1/breeds")!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = [
+            "x-api-key": "ec87e0e5-f352-4670-8d41-f674c3a638de",
+            "Content-Type": "application/json"
+        ]
+        
+        return request
+    }
+    
+    private func loadJson(fromUrlRequest urlRequest: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
+        let urlSession = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+            }
+            if let data = data {
+                completion(.success(data))
+            }
+        }
+        urlSession.resume()
     }
     
     private func parse(jsonData: Data) -> Array<Breed> {
