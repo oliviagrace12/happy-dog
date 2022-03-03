@@ -128,7 +128,7 @@ class BreedsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -147,14 +147,18 @@ class BreedsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        if let detailView = segue.destination as? BreedDetailViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                detailView.breed = breeds[indexPath.row]
+            }
+        }
         // Pass the selected object to the new view controller.
+//        let breedInfo = sender
     }
-    */
-
 }
