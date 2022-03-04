@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="2880" y="686"/>
         </scene>
-        <!--Breeds-->
+        <!--Breed List-->
         <scene sceneID="1uZ-5U-ij9">
             <objects>
                 <tableViewController id="bV1-v2-8fB" customClass="BreedsTableViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,13 +62,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Breeds" image="list.bullet" catalog="system" id="okn-Gj-H0h"/>
-                    <navigationItem key="navigationItem" id="vf8-uz-fSa"/>
+                    <navigationItem key="navigationItem" title="Breed List" id="vf8-uz-fSa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bR-ck-mWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3684" y="686"/>
         </scene>
-        <!--Breed Detail View Controller-->
+        <!--Breed Details-->
         <scene sceneID="wkK-Bq-eFC">
             <objects>
                 <viewController id="Yey-7k-8nP" customClass="BreedDetailViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,13 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A3-Du-CWm">
-                                <rect key="frame" x="180" y="88" width="54.5" height="25.5"/>
+                                <rect key="frame" x="180" y="107" width="54.5" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AdA-nw-eQr">
-                                <rect key="frame" x="20" y="144" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="156" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breed Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fc-ex-THN">
                                         <rect key="frame" x="0.0" y="0.0" width="97" height="20.5"/>
@@ -100,7 +100,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ok5-6S-8m8">
-                                <rect key="frame" x="20" y="178" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="190" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlC-0V-dxJ">
                                         <rect key="frame" x="0.0" y="0.0" width="50.5" height="20.5"/>
@@ -117,7 +117,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oPG-eQ-5Av">
-                                <rect key="frame" x="20" y="212" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="224" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-kk-gzy">
                                         <rect key="frame" x="0.0" y="0.0" width="53.5" height="20.5"/>
@@ -134,7 +134,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lds-eK-m02">
-                                <rect key="frame" x="20" y="246" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="258" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifespan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHi-GX-AZf">
                                         <rect key="frame" x="0.0" y="0.0" width="64.5" height="20.5"/>
@@ -151,7 +151,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PqN-GA-scC">
-                                <rect key="frame" x="20" y="280" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="292" width="374" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Origin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZX-Na-Sdg">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="20.5"/>
@@ -168,25 +168,25 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bred For" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkA-qs-aLl">
-                                <rect key="frame" x="20" y="314" width="65.5" height="20.5"/>
+                                <rect key="frame" x="20" y="326" width="65.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperament text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tl4-9u-eAQ">
-                                <rect key="frame" x="20" y="416" width="374" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperament text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tl4-9u-eAQ">
+                                <rect key="frame" x="20" y="428" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOj-uF-54E">
-                                <rect key="frame" x="20" y="382" width="105.5" height="20.5"/>
+                                <rect key="frame" x="20" y="394" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemIndigoColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bred For text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r75-Wb-7Xe">
-                                <rect key="frame" x="20" y="348" width="374" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bred For text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r75-Wb-7Xe">
+                                <rect key="frame" x="20" y="360" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
@@ -201,8 +201,10 @@
                             <constraint firstItem="AOj-uF-54E" firstAttribute="leading" secondItem="5l0-aq-zaQ" secondAttribute="leading" constant="20" id="8gE-vT-m8s"/>
                             <constraint firstItem="0A3-Du-CWm" firstAttribute="centerX" secondItem="0Xd-q6-iIC" secondAttribute="centerX" id="9rM-Ys-Cgb"/>
                             <constraint firstItem="dkA-qs-aLl" firstAttribute="leading" secondItem="5l0-aq-zaQ" secondAttribute="leading" constant="20" id="9rq-pI-PAj"/>
+                            <constraint firstItem="5l0-aq-zaQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dkA-qs-aLl" secondAttribute="trailing" symbolic="YES" id="ELN-Uk-CYB"/>
                             <constraint firstItem="lds-eK-m02" firstAttribute="leading" secondItem="5l0-aq-zaQ" secondAttribute="leading" constant="20" id="GAe-Og-pAK"/>
                             <constraint firstItem="ok5-6S-8m8" firstAttribute="top" secondItem="AdA-nw-eQr" secondAttribute="bottom" constant="13.5" id="HGV-zQ-L0x"/>
+                            <constraint firstItem="5l0-aq-zaQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AOj-uF-54E" secondAttribute="trailing" symbolic="YES" id="NQ2-CT-Hhb"/>
                             <constraint firstItem="5l0-aq-zaQ" firstAttribute="trailing" secondItem="tl4-9u-eAQ" secondAttribute="trailing" constant="20" id="PjU-3C-W6D"/>
                             <constraint firstItem="AdA-nw-eQr" firstAttribute="leading" secondItem="5l0-aq-zaQ" secondAttribute="leading" constant="20" id="Pkj-Uh-FXS"/>
                             <constraint firstItem="lds-eK-m02" firstAttribute="top" secondItem="oPG-eQ-5Av" secondAttribute="bottom" constant="13.5" id="R3j-Gn-W3S"/>
@@ -215,16 +217,16 @@
                             <constraint firstItem="r75-Wb-7Xe" firstAttribute="top" secondItem="dkA-qs-aLl" secondAttribute="bottom" constant="13.5" id="hgs-Dp-pC7"/>
                             <constraint firstAttribute="trailing" secondItem="lds-eK-m02" secondAttribute="trailing" constant="20" id="j0s-vq-3QW"/>
                             <constraint firstItem="5l0-aq-zaQ" firstAttribute="trailing" secondItem="oPG-eQ-5Av" secondAttribute="trailing" constant="20" id="nqB-tJ-9wf"/>
-                            <constraint firstItem="0A3-Du-CWm" firstAttribute="top" secondItem="5l0-aq-zaQ" secondAttribute="top" id="oAq-qY-gAU"/>
+                            <constraint firstItem="0A3-Du-CWm" firstAttribute="top" secondItem="5l0-aq-zaQ" secondAttribute="top" constant="19" id="oAq-qY-gAU"/>
                             <constraint firstItem="ok5-6S-8m8" firstAttribute="leading" secondItem="5l0-aq-zaQ" secondAttribute="leading" constant="20" id="rCv-Fa-ESs"/>
                             <constraint firstItem="dkA-qs-aLl" firstAttribute="top" secondItem="PqN-GA-scC" secondAttribute="bottom" constant="13.5" id="rJZ-4b-d7W"/>
                             <constraint firstItem="PqN-GA-scC" firstAttribute="top" secondItem="lds-eK-m02" secondAttribute="bottom" constant="13.5" id="tsq-XT-p6b"/>
                             <constraint firstItem="5l0-aq-zaQ" firstAttribute="trailing" secondItem="r75-Wb-7Xe" secondAttribute="trailing" constant="20" id="vcf-R4-4Ue"/>
-                            <constraint firstItem="AdA-nw-eQr" firstAttribute="top" secondItem="0A3-Du-CWm" secondAttribute="bottom" constant="30.5" id="yF0-73-IzN"/>
+                            <constraint firstItem="AdA-nw-eQr" firstAttribute="top" secondItem="0A3-Du-CWm" secondAttribute="bottom" constant="23.5" id="yF0-73-IzN"/>
                             <constraint firstAttribute="trailing" secondItem="PqN-GA-scC" secondAttribute="trailing" constant="20" id="zYA-Sg-X1t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aHM-Ew-Kmd"/>
+                    <navigationItem key="navigationItem" title="Breed Details" id="aHM-Ew-Kmd"/>
                     <connections>
                         <outlet property="bredFor" destination="r75-Wb-7Xe" id="qE5-C8-kHq"/>
                         <outlet property="breedGroup" destination="Dmg-SI-Rk6" id="OD2-Yg-aEE"/>
