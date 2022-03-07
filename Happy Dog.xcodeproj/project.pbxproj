@@ -17,6 +17,7 @@
 		5795A70A27CC6815005DC136 /* breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 5795A70927CC6815005DC136 /* breeds.json */; };
 		5795A70C27CC68AF005DC136 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A70B27CC68AF005DC136 /* Breed.swift */; };
 		5795A70E27D065F2005DC136 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A70D27D065F2005DC136 /* BreedDetailViewController.swift */; };
+		57CDC92127D59F3B009A9CCE /* dog-3431913_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5795A70927CC6815005DC136 /* breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breeds.json; sourceTree = "<group>"; };
 		5795A70B27CC68AF005DC136 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		5795A70D27D065F2005DC136 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dog-3431913_1920.jpg"; path = "../../../../Downloads/dog-3431913_1920.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				5795A6B527C2EBC2005DC136 /* Info.plist */,
 				5795A70927CC6815005DC136 /* breeds.json */,
 				5795A70B27CC68AF005DC136 /* Breed.swift */,
+				57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */,
 			);
 			path = "Happy Dog";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5795A70A27CC6815005DC136 /* breeds.json in Resources */,
+				57CDC92127D59F3B009A9CCE /* dog-3431913_1920.jpg in Resources */,
 				5795A6B427C2EBC2005DC136 /* LaunchScreen.storyboard in Resources */,
 				5795A6B127C2EBC2005DC136 /* Assets.xcassets in Resources */,
 				5795A6AF27C2EBC0005DC136 /* Main.storyboard in Resources */,
