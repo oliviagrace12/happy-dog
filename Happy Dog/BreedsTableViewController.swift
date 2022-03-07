@@ -9,9 +9,9 @@ import UIKit
 
 class BreedsTableViewController: UITableViewController {
     
-    var breeds: Array<Breed> = Array()
     var breedDictionary: Dictionary<String, Breed> = Dictionary()
     var breedNames: Array<String> = Array()
+    let dataParser: DataParser = DataParser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,10 @@ class BreedsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         // parse local file
-        if let data = readLocalFile(forName: "breeds") {
-            breeds = parse(jsonData: data)
+        if (breeds.isEmpty) {
+            if let data = dataParser.readLocalFile(forName: "breeds") {
+                breeds = dataParser.parse(jsonData: data)
+            }
         }
         
         // load json
@@ -42,52 +44,6 @@ class BreedsTableViewController: UITableViewController {
             breedDictionary[breed.name] = breed
             breedNames.append(breed.name)
         }
-    }
-    
-    private func readLocalFile(forName name: String) -> Data? {
-        do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-        } catch {
-            print("File reading error: \(error)")
-        }
-        
-        return nil
-    }
-    
-    private func createUrlRequest () -> URLRequest {
-        let url = URL(string: "https://api.thedogapi.com/v1/breeds")!
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = [
-            "x-api-key": "ec87e0e5-f352-4670-8d41-f674c3a638de",
-            "Content-Type": "application/json"
-        ]
-        
-        return request
-    }
-    
-    private func loadJson(fromUrlRequest urlRequest: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
-        let urlSession = URLSession(configuration: .default).dataTask(with: urlRequest) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-            }
-            if let data = data {
-                completion(.success(data))
-            }
-        }
-        urlSession.resume()
-    }
-    
-    private func parse(jsonData: Data) -> Array<Breed> {
-        do {
-            return try JSONDecoder().decode(Array<Breed>.self, from: jsonData)
-        } catch {
-            print("Parsing Error: \(error)")
-        }
-        return Array()
     }
 
     // MARK: - Table view data source

@@ -7,20 +7,21 @@
 
 import UIKit
 
+var breeds: Array<Breed> = Array()
+
 class FactsViewController: UIViewController {
     
-    var breeds: Array<Breed> = Array()
-
     @IBOutlet weak var breedName: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    let dataParser: DataParser = DataParser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         // parse local file
-        if let data = readLocalFile(forName: "breeds") {
-            breeds = parse(jsonData: data)
+        if let data = dataParser.readLocalFile(forName: "breeds") {
+            breeds = dataParser.parse(jsonData: data)
         }
     }
 
@@ -30,26 +31,5 @@ class FactsViewController: UIViewController {
         
         breedName.text = breed.name
         imageView.loadImageFrom(urlAddress: breed.image.url)
-    }
-    
-    private func parse(jsonData: Data) -> Array<Breed> {
-        do {
-            return try JSONDecoder().decode(Array<Breed>.self, from: jsonData)
-        } catch {
-            print("Parsing Error: \(error)")
-        }
-        return Array()
-    }
-    
-    private func readLocalFile(forName name: String) -> Data? {
-        do {
-            if let bundlePath = Bundle.main.path(forResource: name, ofType: "json"), let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
-                return jsonData
-            }
-        } catch {
-            print("File reading error: \(error)")
-        }
-        
-        return nil
     }
 }
