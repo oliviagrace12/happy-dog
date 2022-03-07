@@ -17,6 +17,7 @@ class BreedDetailViewController: UIViewController {
     @IBOutlet weak var origin: UILabel!
     @IBOutlet weak var bredFor: UILabel!
     @IBOutlet weak var temperament: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var breed: Breed?
         
@@ -24,6 +25,9 @@ class BreedDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let imageUrl = breed?.image.url {
+            imageView.loadImageFrom(urlAddress: imageUrl)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,4 +56,18 @@ class BreedDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension UIImageView {
+    func loadImageFrom(urlAddress: String) {
+        guard let url = URL(string: urlAddress) else { return }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData  = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                    self?.image = loadedImage
+                }
+            }
+        }
+    }
 }
