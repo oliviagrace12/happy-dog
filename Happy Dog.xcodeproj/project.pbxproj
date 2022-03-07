@@ -19,6 +19,8 @@
 		5795A70E27D065F2005DC136 /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5795A70D27D065F2005DC136 /* BreedDetailViewController.swift */; };
 		57CDC92127D59F3B009A9CCE /* dog-3431913_1920.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */; };
 		57CDC92327D5B7C4009A9CCE /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC92227D5B7C4009A9CCE /* DataParser.swift */; };
+		57CDC92527D5BB3E009A9CCE /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC92427D5BB3E009A9CCE /* GroupsTableViewController.swift */; };
+		57CDC92827D5BED6009A9CCE /* SingleGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDC92727D5BED6009A9CCE /* SingleGroupTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		5795A70D27D065F2005DC136 /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
 		57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dog-3431913_1920.jpg"; path = "../../../../Downloads/dog-3431913_1920.jpg"; sourceTree = "<group>"; };
 		57CDC92227D5B7C4009A9CCE /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		57CDC92427D5BB3E009A9CCE /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		57CDC92727D5BED6009A9CCE /* SingleGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGroupTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				5795A70B27CC68AF005DC136 /* Breed.swift */,
 				57CDC92027D59F3B009A9CCE /* dog-3431913_1920.jpg */,
 				57CDC92227D5B7C4009A9CCE /* DataParser.swift */,
+				57CDC92427D5BB3E009A9CCE /* GroupsTableViewController.swift */,
+				57CDC92727D5BED6009A9CCE /* SingleGroupTableViewController.swift */,
 			);
 			path = "Happy Dog";
 			sourceTree = "<group>";
@@ -159,10 +165,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5795A6AC27C2EBC0005DC136 /* FactsViewController.swift in Sources */,
+				57CDC92527D5BB3E009A9CCE /* GroupsTableViewController.swift in Sources */,
 				5795A6A827C2EBC0005DC136 /* AppDelegate.swift in Sources */,
 				5795A70C27CC68AF005DC136 /* Breed.swift in Sources */,
 				5795A70827CC66A9005DC136 /* BreedsTableViewController.swift in Sources */,
 				5795A70E27D065F2005DC136 /* BreedDetailViewController.swift in Sources */,
+				57CDC92827D5BED6009A9CCE /* SingleGroupTableViewController.swift in Sources */,
 				57CDC92327D5B7C4009A9CCE /* DataParser.swift in Sources */,
 				5795A6AA27C2EBC0005DC136 /* SceneDelegate.swift in Sources */,
 			);

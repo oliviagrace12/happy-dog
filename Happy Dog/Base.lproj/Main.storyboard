@@ -30,7 +30,106 @@
             </objects>
             <point key="canvasLocation" x="2880" y="686"/>
         </scene>
-        <!--Breed List-->
+        <!--Breed Groups-->
+        <scene sceneID="0wD-HF-lKM">
+            <objects>
+                <tableViewController id="j9N-gh-zik" customClass="GroupsTableViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="DZj-LF-N3p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicGroup" textLabel="fIk-gX-nbV" style="IBUITableViewCellStyleDefault" id="iUT-Sk-jIA">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iUT-Sk-jIA" id="KYO-h6-AdP">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fIk-gX-nbV">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hCf-1F-6cV" kind="show" id="RXf-Ls-6tN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="j9N-gh-zik" id="qks-ry-56l"/>
+                            <outlet property="delegate" destination="j9N-gh-zik" id="gv8-Ui-sZ5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Breed Groups" id="xpR-CX-NrQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjN-I4-3eP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3683" y="1374"/>
+        </scene>
+        <!--Single Group Table View Controller-->
+        <scene sceneID="qIM-Oa-Rd2">
+            <objects>
+                <tableViewController id="hCf-1F-6cV" customClass="SingleGroupTableViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="GtB-r4-Agq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="basicSingleGroup" textLabel="cyF-xA-0tG" style="IBUITableViewCellStyleDefault" id="EbR-tK-0hr">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EbR-tK-0hr" id="nJn-D0-L2v">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyF-xA-0tG">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hCf-1F-6cV" id="qsD-y2-6br"/>
+                            <outlet property="delegate" destination="hCf-1F-6cV" id="bCY-S4-Zv0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XFQ-SL-K1W"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7m-Ek-TRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4522" y="1373"/>
+        </scene>
+        <!--Breed Groups-->
+        <scene sceneID="pdK-U1-Fo5">
+            <objects>
+                <navigationController id="c1H-7K-BgQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Breed Groups" image="list.bullet.below.rectangle" catalog="system" id="1iD-3D-OWU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nd8-cE-KiJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.29618154969999999" green="0.5860112408" blue="0.65918527130000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="j9N-gh-zik" kind="relationship" relationship="rootViewController" id="eR1-NU-6Yw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S55-Vh-lfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880" y="1374"/>
+        </scene>
+        <!--All Breeds-->
         <scene sceneID="1uZ-5U-ij9">
             <objects>
                 <tableViewController id="bV1-v2-8fB" customClass="BreedsTableViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +165,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="All Breeds" image="list.bullet" catalog="system" id="okn-Gj-H0h"/>
-                    <navigationItem key="navigationItem" title="Breed List" id="vf8-uz-fSa"/>
+                    <navigationItem key="navigationItem" title="All Breeds" id="vf8-uz-fSa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bR-ck-mWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,6 +368,7 @@
                     <connections>
                         <segue destination="lov-nw-vgX" kind="relationship" relationship="viewControllers" id="28E-yQ-piP"/>
                         <segue destination="WcT-sI-vIU" kind="relationship" relationship="viewControllers" id="6yU-Pu-JUK"/>
+                        <segue destination="c1H-7K-BgQ" kind="relationship" relationship="viewControllers" id="QBa-CI-K9p"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuP-Gh-suH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -364,6 +464,7 @@
     <resources>
         <image name="dog-3431913_1920.jpg" width="1920" height="1920"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="list.bullet.below.rectangle" catalog="system" width="128" height="112"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
