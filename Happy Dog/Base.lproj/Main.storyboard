@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lL4-i8-QAi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WcT-sI-vIU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="2880" y="686"/>
         </scene>
-        <!--Breed List-->
+        <!--Dog Breeds-->
         <scene sceneID="1uZ-5U-ij9">
             <objects>
                 <tableViewController id="bV1-v2-8fB" customClass="BreedsTableViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Breeds" image="list.bullet" catalog="system" id="okn-Gj-H0h"/>
-                    <navigationItem key="navigationItem" title="Breed List" id="vf8-uz-fSa"/>
+                    <navigationItem key="navigationItem" title="Dog Breeds" id="vf8-uz-fSa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bR-ck-mWn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,78 +245,8 @@
             </objects>
             <point key="canvasLocation" x="4521.739130434783" y="685.71428571428567"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="E0W-Eu-FQn">
-            <objects>
-                <tabBarController id="lL4-i8-QAi" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ite-3x-fGR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="lov-nw-vgX" kind="relationship" relationship="viewControllers" id="28E-yQ-piP"/>
-                        <segue destination="WcT-sI-vIU" kind="relationship" relationship="viewControllers" id="6yU-Pu-JUK"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kuP-Gh-suH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1946" y="354"/>
-        </scene>
-        <!--Dog Facts-->
-        <scene sceneID="s3R-Xa-hAR">
-            <objects>
-                <viewController id="lov-nw-vgX" customClass="FactsViewController" customModule="Happy_Dog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SUw-db-SsP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Dog Fact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZc-hK-Skt">
-                                <rect key="frame" x="118" y="76" width="178" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" systemColor="systemPinkColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEG-xw-pWV">
-                                <rect key="frame" x="114" y="136" width="186" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Generate!">
-                                    <color key="titleColor" systemColor="systemTealColor"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kC-Ma-2yi">
-                                <rect key="frame" x="20" y="204" width="374" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="4EE-bc-6zO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dfq-tA-WTl"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dfq-tA-WTl" firstAttribute="trailing" secondItem="LEG-xw-pWV" secondAttribute="trailing" constant="114" id="NME-KH-VJH"/>
-                            <constraint firstItem="CZc-hK-Skt" firstAttribute="centerX" secondItem="SUw-db-SsP" secondAttribute="centerX" id="QFC-XJ-GWl"/>
-                            <constraint firstItem="4kC-Ma-2yi" firstAttribute="leading" secondItem="dfq-tA-WTl" secondAttribute="leading" constant="20" id="fZX-fD-jwL"/>
-                            <constraint firstItem="CZc-hK-Skt" firstAttribute="top" secondItem="dfq-tA-WTl" secondAttribute="top" constant="32" id="l8X-1p-b0R"/>
-                            <constraint firstItem="LEG-xw-pWV" firstAttribute="leading" secondItem="dfq-tA-WTl" secondAttribute="leading" constant="114" id="nyc-Tq-39W"/>
-                            <constraint firstItem="4kC-Ma-2yi" firstAttribute="top" secondItem="LEG-xw-pWV" secondAttribute="bottom" constant="32" id="tCq-dm-bE4"/>
-                            <constraint firstItem="LEG-xw-pWV" firstAttribute="top" secondItem="CZc-hK-Skt" secondAttribute="bottom" constant="32" id="vLr-wV-3ZT"/>
-                            <constraint firstItem="dfq-tA-WTl" firstAttribute="trailing" secondItem="4kC-Ma-2yi" secondAttribute="trailing" constant="20" id="yjP-KP-NjA"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Dog Facts" image="book" catalog="system" id="FrB-gu-b4c"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3NB-F5-f6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3074" y="-102"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="99"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
@@ -332,9 +262,6 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
