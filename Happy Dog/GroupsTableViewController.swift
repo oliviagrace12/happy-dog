@@ -23,9 +23,7 @@ class GroupsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         if (breeds.isEmpty) {
-            if let data = dataParser.readLocalFile(forName: "breeds") {
-                breeds = dataParser.parse(jsonData: data)
-            }
+            DataParser().getBreedData()
         }
         
         for breed in breeds {

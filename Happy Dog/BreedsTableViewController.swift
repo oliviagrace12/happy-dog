@@ -24,21 +24,8 @@ class BreedsTableViewController: UITableViewController {
         
         // parse local file
         if (breeds.isEmpty) {
-            if let data = dataParser.readLocalFile(forName: "breeds") {
-                breeds = dataParser.parse(jsonData: data)
-            }
+            dataParser.getBreedData()
         }
-        
-        // load json
-//        self.loadJson(fromUrlRequest: createUrlRequest()) { (result) in
-//            switch result {
-//                case .success(let data):
-//                    print("Request successful")
-//                    self.breeds = self.parse(jsonData: data)
-//                case .failure(let error):
-//                    print("Request failed: \(error)")
-//            }
-//        }
         
         for breed in breeds {
             breedDictionary[breed.name] = breed

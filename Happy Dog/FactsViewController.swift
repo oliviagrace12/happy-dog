@@ -20,9 +20,7 @@ class FactsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // parse local file
-        if let data = dataParser.readLocalFile(forName: "breeds") {
-            breeds = dataParser.parse(jsonData: data)
-        }
+        dataParser.getBreedData()
     }
 
     @IBAction func generatePressed(_ sender: UIButton) {
