@@ -10,7 +10,7 @@ import UIKit
 class GroupsTableViewController: UITableViewController {
     
     let dataParser: DataParser = DataParser()
-    var groupDictionary: Dictionary<String, Breed> = Dictionary()
+    var groupDictionary: Dictionary<String, Array<Breed>> = Dictionary()
     var groups: Array<String> = Array()
 
     override func viewDidLoad() {
@@ -29,21 +29,28 @@ class GroupsTableViewController: UITableViewController {
         }
         
         for breed in breeds {
-            let breedGroup: String = breed.breed_group != nil ? breed.breed_group! : "Other"
-            groupDictionary[breedGroup] = breed
-            groups.append(breedGroup)
+            let breedGroup = (breed.breed_group != nil && breed.breed_group != "") ? breed.breed_group! : "Other"
+            
+            if (groupDictionary[breedGroup] == nil) {
+                groupDictionary[breedGroup] = [breed]
+            } else {
+                groupDictionary[breedGroup]!.append(breed)
+            }
+            
+            if (!groups.contains(breedGroup)) {
+                groups.append(breedGroup)
+            }
         }
+        groups = groups.sorted()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return groups.count
     }
 
@@ -92,14 +99,19 @@ class GroupsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        guard let singleGroupTableView = segue.destination as? SingleGroupTableViewController else { return }
+        guard let indexPath = self.tableView.indexPathForSelectedRow else {return }
+        
+        singleGroupTableView.breeds = groupDictionary[groups[indexPath.row]]!
     }
-    */
+    
 
 }

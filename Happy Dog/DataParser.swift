@@ -36,7 +36,7 @@ class DataParser {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = [
-            "x-api-key": "ec87e0e5-f352-4670-8d41-f674c3a638de",
+            "x-api-key": ,
             "Content-Type": "application/json"
         ]
         

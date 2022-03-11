@@ -29,7 +29,7 @@ class FactsViewController: UIViewController {
         let index: Int = Int.random(in: 0..<breeds.count)
         let breed = breeds[index]
         
-        breedName.text = breed.name
         imageView.loadImageFrom(urlAddress: breed.image.url)
+        breedName.text = breed.name
     }
 }
