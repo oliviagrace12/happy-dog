@@ -60,14 +60,16 @@ class BreedDetailViewController: UIViewController {
 
 extension UIImageView {
     func loadImageFrom(urlAddress: String) {
-        guard let url = URL(string: urlAddress) else { return }
-        
-        DispatchQueue.main.async { [weak self] in
-            if let imageData  = try? Data(contentsOf: url) {
-                if let loadedImage = UIImage(data: imageData) {
-                    self?.image = loadedImage
-                }
-            }
-        }
+
+        if let url = URL(string: urlAddress) {
+           URLSession.shared.dataTask(with: url) { (data, response, error) in
+             // Error handling...
+             guard let imageData = data else { return }
+
+             DispatchQueue.main.async {
+               self.image = UIImage(data: imageData)
+             }
+           }.resume()
+         }
     }
 }
